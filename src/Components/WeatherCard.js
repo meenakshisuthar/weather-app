@@ -69,8 +69,8 @@ const WeatherCard = ({tempInfo}) => {
                 </p>
               </div>
             </div>
-            <div className="weather-extra-info">
-            <div className="two-sided-section">
+            <div className="temp-info-minmax">
+             <div className="two-sided-section">
                 <p>
                   <i className={"wi wi-rain"}></i>
                 </p>

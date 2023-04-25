@@ -115,14 +115,12 @@ body {
 }
 
 .temp-info-minmax,
-.weather-extra-info,
 .two-sided-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
   align-items: center;
   color: #70c1b3;
-  /* background-color: blanchedalmond; */
 }
 
 .widget .extra-temp .extra-info-leftside {
@@ -144,7 +142,6 @@ body {
 
 .searchTerm {
   width: 50%;
-  /* border: 3px solid #00b4cc; */
   border: none;
   padding: 16px;
   height: 20px;
