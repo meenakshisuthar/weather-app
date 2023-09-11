@@ -64,7 +64,7 @@ const WeatherCard = ({tempInfo}) => {
                   <i className={"wi wi-humidity"}></i>
                 </p>
                 <p className='extra-info-leftside'>
-                  {humidity}<br/>
+                  {humidity}%<br/>
                   Humidity
                 </p>
               </div>
