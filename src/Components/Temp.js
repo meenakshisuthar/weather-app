@@ -21,23 +21,16 @@ const Temp = () => {
       // Extract and group daily forecast data by date
       const groupedDailyForecast = groupForecastByDate(dailyForecastData.list);
 
-      // Get today's date in the format "YYYY-MM-DD"
+      // Get today's date "
       const today = new Date().toISOString().split('T')[0];
 
       // Filter out the current day's data
-      const filteredDailyForecast = Object.keys(groupedDailyForecast).reduce(
-        (result, date) => {
-          if (date !== today) {
-            result.push({
-              date: date,
-              data: groupedDailyForecast[date][0], // Take the first forecast data of the day
-            });
-          }
-          return result;
-        },
-        []
-      );
-
+      const filteredDailyForecast = Object.keys(groupedDailyForecast)
+      .filter(date => date > today)
+      .map(date => ({
+        date: date,
+        data: groupedDailyForecast[date][0], 
+      }));
       setDailyForecast(filteredDailyForecast);
 
       const { temp, humidity, pressure } = data.main;
